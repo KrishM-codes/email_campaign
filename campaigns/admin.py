@@ -3,7 +3,7 @@ from .models import Subscriber, Campaign, SentEmail
 
 @admin.register(Subscriber)
 class SubscriberAdmin(admin.ModelAdmin):
-    list_display = ('email', "first_name", "is_active", "subscribed_at", "unsubscribed_at")
+    list_display = ('email', "first_name", "is_active", "subscribed_at", "resubscribed_at", "unsubscribed_at")
 
 @admin.register(Campaign)
 class CampaignAdmin(admin.ModelAdmin):
