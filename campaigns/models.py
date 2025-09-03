@@ -5,7 +5,7 @@ class Subscriber(models.Model):
     first_name = models.CharField(max_length=30, blank=True)
     is_active = models.BooleanField(default=True)
     subscribed_at = models.DateTimeField(auto_now_add=True)
-    unsubsribed_at = models.DateTimeField(null=True, blank=True)
+    unsubscribed_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return self.email
