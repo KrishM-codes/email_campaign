@@ -1,0 +1,16 @@
+{% extends "emails/base_email.html" %}
+
+{% block content %}
+  <h2>{{ campaign.subject }}</h2>
+  <p><em>{{ campaign.preview_text }}</em></p>
+
+  <div>
+    {{ campaign.html_content|safe }}
+  </div>
+
+  {% if campaign.article_url %}
+    <p>
+      <a href="{{ campaign.article_url }}" style="color: blue;">Read full article</a>
+    </p>
+  {% endif %}
+{% endblock %}
