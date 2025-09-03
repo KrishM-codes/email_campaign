@@ -12,3 +12,7 @@ build/
 
 # DB
 db.sqlite3
+
+# env
+*/.env
+.env
