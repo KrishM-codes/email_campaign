@@ -1,5 +1,6 @@
 import logging
 import smtplib
+import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
@@ -26,6 +27,7 @@ def send_email(from_email, to_email, subject, html, text):
     """Send email using SMTP (Mailgun) or dry-run mode."""
     if settings.EMAIL_DRY_RUN:
         logger.info(f"[DRY RUN] Email to %s with subject '%s'", to_email, subject)
+        time.sleep(1)
         return {"status": "success", "dry_run": True}
     try:
         msg = MIMEMultipart("alternative")

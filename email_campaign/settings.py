@@ -25,6 +25,8 @@ SMTP_PORT = int(os.getenv("SMTP_PORT", 587))
 SMTP_USER = os.getenv("SMTP_USER", "")
 SMTP_PASS = os.getenv("SMTP_PASS", "")
 FROM_EMAIL = os.getenv("FROM_EMAIL", "mailtest@abc.com")
+EMAIL_SEND_RETRIES = int(os.getenv("EMAIL_SEND_RETRIES", 2))
+EMAIL_WORKER_COUNT = int(os.getenv("EMAIL_WORKER_COUNT", 8))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
